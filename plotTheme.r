@@ -29,7 +29,8 @@ theme_mnb <- function(font = "Helvetica", grid = F, legend.position = NULL , ...
                  title = element_text(size = 16, face = "bold", family = font, colour = titleColor, ),
                  axis.line = element_line(size = 0.5, colour = axisColor),
                  panel.background = element_blank(),
-                 plot.title = element_text( hjust=0.5) # centers the title
+                 plot.title = element_text( hjust=0.5), # centers the title
+                 plot.subtitle = element_text( hjust=0.5) # centers the title
   )
   
   #Grid lines

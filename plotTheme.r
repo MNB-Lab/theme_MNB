@@ -30,7 +30,7 @@ theme_mnb <- function(font = "Helvetica", grid = F, legend.position = NULL , ...
                  axis.line = element_line(size = 0.5, colour = axisColor),
                  panel.background = element_blank(),
                  plot.title = element_text( hjust=0.5), # centers the title
-                 plot.subtitle = element_text( hjust=0.5) # centers the title
+                 plot.subtitle = element_text( hjust=0.5, size=4) # centers the title
   )
   
   #Grid lines

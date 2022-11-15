@@ -27,7 +27,7 @@ theme_mnb <- function(font = "Helvetica", grid = F, legend.position = NULL , ...
                  legend.title =  element_text(size = 10, face = "bold", family = font, color = axisTitleColor ),
                  legend.text = element_text(size = 8, family = font, color = axisTextColor ),
                  title = element_text(size = 16, face = "bold", family = font, colour = titleColor, ),
-                 axis.line = element_line(size = 0.5, colour = axisColor),
+                 axis.line = element_line(linewidth = 0.5, colour = axisColor),
                  panel.background = element_blank(),
                  plot.title = element_text( hjust=0.5, size=16), # centers the title
                  plot.subtitle = element_text( hjust=0.5, size=14) # centers the title
@@ -36,9 +36,9 @@ theme_mnb <- function(font = "Helvetica", grid = F, legend.position = NULL , ...
   #Grid lines
   #This removes all minor gridlines and adds major y gridlines. In many cases you will want to change this to remove y gridlines and add x gridlines. The cookbook shows you examples for doing so
   if (grid == T) {
-    theme <- theme + theme( panel.grid.minor = ggplot2::element_line(color="#cbcbcb", size=0.25),
-                            panel.grid.major.y = ggplot2::element_line(color="#cbcbcb", size=0.25),
-                            panel.grid.major.x = ggplot2::element_line(color="#cbcbcb", size=0.25)
+    theme <- theme + theme( panel.grid.minor = ggplot2::element_line(color="#cbcbcb", linewidth=0.25),
+                            panel.grid.major.y = ggplot2::element_line(color="#cbcbcb", linewidth=0.25),
+                            panel.grid.major.x = ggplot2::element_line(color="#cbcbcb", linewidth=0.25)
     )
     
   }

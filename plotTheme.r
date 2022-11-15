@@ -18,14 +18,14 @@ theme_mnb <- function(font = "Helvetica", grid = F, legend.position = NULL , ...
     legend.position = "bottom"
   }
   
-  theme <- theme(axis.title = element_text(size=14, face="bold", family = font, colour = axisTitleColor ),
-                 axis.text = element_text(size = 13, family = font, colour = axisTextColor),
+  theme <- theme(axis.title = element_text(size=18, face="bold", family = font, colour = axisTitleColor ),
+                 axis.text = element_text(size = 16, family = font, colour = axisTextColor),
                  #axis.text.x = element_text(margin = margin(l = 3, r = 3, b = 3)),
                  strip.background = element_rect(fill=stripColor, linetype = NULL),   ## removes the grey box in facets
-                 strip.text = element_text(size = 10, face = "bold", family = font, color = axisTextColor),
+                 strip.text = element_text(size = 12, face = "bold", family = font, color = axisTextColor),
                  legend.position = legend.position,
                  legend.title =  element_text(size = 10, face = "bold", family = font, color = axisTitleColor ),
-                 legend.text = element_text(size = 8, family = font, color = axisTextColor ),
+                 legend.text = element_text(size = 12, family = font, color = axisTextColor ),
                  title = element_text(size = 16, face = "bold", family = font, colour = titleColor, ),
                  axis.line = element_line(linewidth = 0.5, colour = axisColor),
                  panel.background = element_blank(),

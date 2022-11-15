@@ -4,7 +4,7 @@
 ### Version_1
 
 
-theme_mnb <- function(font = "Helvetica", grid = F, legend.position = NULL , ...){
+theme_mnb <- function(font = "Helvetica", grid = F, legend.position = NULL , x.angle=0 ...){
   
   font <- font
   ## Colors
@@ -17,10 +17,15 @@ theme_mnb <- function(font = "Helvetica", grid = F, legend.position = NULL , ...
   if(is.null(legend.position )){
     legend.position = "bottom"
   }
+
+  if(x.angle >=0 && x.angle <=360){
+    stop("x.angle is X-axis text angle: [0,360]")
+  }
   
   theme <- theme(axis.title = element_text(size=18, face="bold", family = font, colour = axisTitleColor ),
                  axis.text = element_text(size = 16, family = font, colour = axisTextColor),
                  #axis.text.x = element_text(margin = margin(l = 3, r = 3, b = 3)),
+                 axis.text.x = element_text(angle=x.angle)
                  strip.background = element_rect(fill=stripColor, linetype = NULL),   ## removes the grey box in facets
                  strip.text = element_text(size = 12, face = "bold", family = font, color = axisTextColor),
                  legend.position = legend.position,

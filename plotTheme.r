@@ -4,7 +4,7 @@
 ### Version_1
 
 
-theme_mnb <- function(font = "Helvetica", grid = F, legend.position = NULL , x.angle=0 ...){
+theme_mnb <- function(font = "Helvetica", grid = F, legend.position = NULL , x.angle=0, ...){
   
   font <- font
   ## Colors

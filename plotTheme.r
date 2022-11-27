@@ -26,9 +26,7 @@ theme_mnb <- function(font  =  "Helvetica", grid  =  F, legend.position  =  NULL
   else if((x.angle > 0 && x.angle <= 360)){
     x.axis <- element_text(angle = x.angle, hjust = 1, size  =  x.size)
   }
-  else if{
-    stop("x.angle is X-axis text angle: [0,360]")
-  }
+
   
   theme <- theme(axis.title  =  element_text(size = 14, face = "bold", family  =  font, colour  =  axisTitleColor ),
                  axis.text  =  element_text(size  =  12, family  =  font, colour  =  axisTextColor),

@@ -2,4 +2,4 @@
 Theme for ggplots to be used in MNB Lab
 
 
-source("https://raw.githubusercontent.com/MNB-Lab/theme_MNB/main/Theme.r")
+source("https://raw.githubusercontent.com/MNB-Lab/theme_MNB/main/theme.R")

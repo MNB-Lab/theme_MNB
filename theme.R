@@ -22,10 +22,15 @@ library(ggpubr)
 #'
 #' p <- ggplot(mtcars, aes(mpg, wt)) + geom_point() + ggtitle("Scatter plot of MPG vs WT")
 #' p + fnTheme(legend.position = "right", baseTextSize = 10)
-fnTheme <- function(legend.position = "bottom", baseTextSize = 8, x.text.angle =0, ...) {
+# Define the custom theme function
+fnTheme <- function(legend.position = "bottom", baseTextSize = 8, x.text.angle = 0, ...) {
 
   # Additional arguments
   args <- list(...)
+
+  # Determine vjust and hjust based on x.text.angle
+  vjust <- if (x.text.angle != 0) 1 else 0.5
+  hjust <- if (x.text.angle != 0) 1 else 0.5
 
   # Create the custom theme
   custom_theme <- theme_pubr(legend = legend.position) +
@@ -34,7 +39,7 @@ fnTheme <- function(legend.position = "bottom", baseTextSize = 8, x.text.angle =
       axis.line = element_line(size = 0.5, color = "gray50"),
       axis.ticks = element_line(size = 0.5, color = "gray50"),
       axis.text = element_text(size = baseTextSize),
-      axis.text.x = element_text(size = baseTextSize, angle = x.text.angle),
+      axis.text.x = element_text(size = baseTextSize, angle = x.text.angle, vjust = vjust, hjust = hjust),
       axis.title = element_text(size = baseTextSize + 2, face = "bold"),
       plot.title = element_text(size = baseTextSize + 4, face = "bold"),
       plot.subtitle = element_text(size = baseTextSize + 2, face = "bold"),

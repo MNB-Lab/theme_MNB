@@ -31,7 +31,7 @@ ggplot(mtcars, aes(x = wt, y = mpg)) +
   fnTheme() ### this is how you add the theme
 ```
 
-[![**A:** plot before applying the them **B:** after applying the theme fnTheme()](plots/mtcars_scatter.png)](plots/mtcars_scatter.png)
+[![A: plot before applying the them B: after applying the theme fnTheme()](plots/mtcars_scatter.png)](plots/mtcars_scatter.png)
 
 ## Parameters that can be passed to fnTheme()
 
@@ -50,6 +50,8 @@ there are several parameters you can pass to the fnTheme function
     -   legend title and axis title is set to `baseTextSize + 2`
 
     -   plot.title is `baseTextSize + 4`
+
+-   `legend.key.size`: default 4, numeric, value in cm
 
     ``` r
     library(ggplot2)
@@ -73,8 +75,8 @@ there are several parameters you can pass to the fnTheme function
     # Apply the custom theme with increased text size and angled x-axis text
     scatter_plot_text_custom <- scatter_plot + fnTheme(baseTextSize = 12, x.text.angle = 45)
 
-    # Apply the custom theme with custom vjust and hjust values
-    scatter_plot_custom_just <- scatter_plot + fnTheme(baseTextSize = 10, x.text.angle = 60, vjustx = 0.5, hjustx = 0.5)
+    # Apply the custom theme with custom vjust and hjust values & legend.key.size
+    scatter_plot_custom_just <- scatter_plot + fnTheme(baseTextSize = 10, x.text.angle = 60, vjustx = 0.5, hjustx = 0.5, legend.key.size = 0.3)
 
     print(scatter_plot_custom)
     print(scatter_plot_legend_right)

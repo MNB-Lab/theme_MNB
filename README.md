@@ -28,7 +28,7 @@ ggplot(mtcars, aes(x = wt, y = mpg)) +
     x = "Weight (1000 lbs)",
     y = "Miles per Gallon"
   ) +
-  fnTheme()
+  fnTheme() ### this is how you add the theme
 ```
 
 [![**A:** plot before applying the them **B:** after applying the theme fnTheme()](plots/mtcars_scatter.png)](plots/mtcars_scatter.png)

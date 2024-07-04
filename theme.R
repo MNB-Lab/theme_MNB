@@ -1,3 +1,7 @@
+
+library(ggplot2)
+library(ggpubr)
+
 #' Custom Theme for ggplot2
 #'
 #' This function creates a custom theme for ggplot2 plots with specified legend position and base text size.
@@ -41,3 +45,4 @@ fnTheme <- function(legend.position = "bottom", baseTextSize = 8, ...) {
 
   return(custom_theme)
 }
+

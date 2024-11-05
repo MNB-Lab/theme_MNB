@@ -1,4 +1,4 @@
-# Author: Nirmal
+=# Author: Nirmal
 # Date: 4th July 2024
 
 library(ggplot2)
@@ -30,8 +30,8 @@ library(ggpubr)
 #' p + fnTheme(legendfnTheme <- function(legend.position = "bottom", baseTextSize = 8, x.text.angle = 0, vjustx = NULL, hjustx = NULL, ...) {
 
 # Additional arguments
-fnTheme <- function(legend.position = "bottom", baseTextSize = 8, x.text.angle = 0, vjustx = NULL, hjustx = NULL, 
-                    legend.key.size = 0.4, ...) {
+fnTheme <- function(legend.position = "bottom", baseTextSize = 8, x.text.angle = 0, vjustx = NULL, hjustx = NULL, vjusty = NULL, hjusty = NULL,
+                    legend.key.size = 0.4, face.title = "plain", face.subtitle = "plain", face.axisText = "plain", ...) {
   
   # Determine vjust and hjust based on x.text.angle
   vjust <- if (!is.null(vjustx)) vjustx else if (x.text.angle != 0) 0.5 else 0.5
@@ -44,10 +44,11 @@ fnTheme <- function(legend.position = "bottom", baseTextSize = 8, x.text.angle =
       axis.line = element_line(size = 0.5, color = "gray50"),
       axis.ticks = element_line(size = 0.5, color = "gray50"),
       axis.text = element_text(size = baseTextSize),
-      axis.text.x = element_text(size = baseTextSize, angle = x.text.angle, vjust = vjust, hjust = hjust),
-      axis.title = element_text(size = baseTextSize + 2, face = "bold"),
-      plot.title = element_text(size = baseTextSize + 4, face = "bold"),
-      plot.subtitle = element_text(size = baseTextSize + 2, face = "bold"),
+      axis.text.x = element_text(size = baseTextSize, angle = x.text.angle, vjust = vjust, hjust = hjust, face = face.axisText),
+      axis.text.y = element_text(size = baseTextSize, angle = x.text.angle, vjust = vjusty, hjust = hjusty, face = face.axisText),
+      axis.title = element_text(size = baseTextSize + 2, face = face.title),
+      plot.title = element_text(size = baseTextSize + 4, face = face.title),
+      plot.subtitle = element_text(size = baseTextSize + 2, face = face.subtitle),
       legend.title = element_text(size = baseTextSize + 2),
       legend.text = element_text(size = baseTextSize),
       legend.key.size = unit(legend.key.size, "cm"),

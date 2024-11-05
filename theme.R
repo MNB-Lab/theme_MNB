@@ -41,8 +41,8 @@ fnTheme <- function(legend.position = "bottom", baseTextSize = 8, x.text.angle =
   custom_theme <- theme_pubr(legend = legend.position) +
     labs_pubr() +
     theme(
-      axis.line = element_line(size = 0.5, color = "gray50"),
-      axis.ticks = element_line(size = 0.5, color = "gray50"),
+      axis.line = element_line(linewidth = 0.5, color = "gray50"),
+      axis.ticks = element_line(linewidth = 0.5, color = "gray50"),
       axis.text = element_text(size = baseTextSize),
       axis.text.x = element_text(size = baseTextSize, angle = x.text.angle, vjust = vjust, hjust = hjust, face = face.axisText),
       axis.text.y = element_text(size = baseTextSize, angle = x.text.angle, vjust = vjusty, hjust = hjusty, face = face.axisText),

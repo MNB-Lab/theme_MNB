@@ -1,4 +1,4 @@
-=# Author: Nirmal
+# Author: Nirmal
 # Date: 4th July 2024
 
 library(ggplot2)

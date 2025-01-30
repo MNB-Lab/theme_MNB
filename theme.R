@@ -30,7 +30,7 @@ library(ggpubr)
 #' p + fnTheme(legendfnTheme <- function(legend.position = "bottom", baseTextSize = 8, x.text.angle = 0, vjustx = NULL, hjustx = NULL, ...) {
 
 # Additional arguments
-fnTheme <- function(legend.position = "bottom", baseTextSize = 8, x.text.angle = 0, vjustx = NULL, hjustx = NULL, vjusty = NULL, hjusty = NULL,
+fnTheme <- function(legend.position = "bottom", baseTextSize = 8, x.text.angle = 0, y.text.angle = 0, vjustx = NULL, hjustx = NULL, vjusty = NULL, hjusty = NULL,
                     legend.key.size = 0.4, face.title = "plain", face.subtitle = "plain", face.axisText = "plain", ...) {
   
   # Determine vjust and hjust based on x.text.angle
@@ -45,7 +45,7 @@ fnTheme <- function(legend.position = "bottom", baseTextSize = 8, x.text.angle =
       axis.ticks = element_line(linewidth = 0.5, color = "gray50"),
       axis.text = element_text(size = baseTextSize),
       axis.text.x = element_text(size = baseTextSize + 4, angle = x.text.angle, vjust = vjust, hjust = hjust, face = face.axisText),
-      axis.text.y = element_text(size = baseTextSize + 4, angle = x.text.angle, vjust = vjusty, hjust = hjusty, face = face.axisText),
+      axis.text.y = element_text(size = baseTextSize + 4, angle = y.text.angle, vjust = vjusty, hjust = hjusty, face = face.axisText),
       axis.title = element_text(size = baseTextSize + 4, face = face.title),
       plot.title = element_text(size = baseTextSize + 4, face = face.title),
       plot.subtitle = element_text(size = baseTextSize + 2, face = face.subtitle),

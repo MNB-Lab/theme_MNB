@@ -3,6 +3,11 @@
 
 library(ggplot2)
 library(ggpubr)
+# A4 dimensions in inches
+a4_width <- 8.27
+a4_height <- 11.69
+
+
 
 #' Custom Theme for ggplot2
 #'
